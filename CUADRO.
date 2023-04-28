@@ -1,0 +1,35 @@
+package javaapii;
+
+import java.awt.FlowLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import javax.swing.JComboBox;
+import javax.swing.JFrame;
+
+/**
+ *
+ * @author USUARIO
+ */
+public class Javaapii extends JFrame implements ActionListener {
+
+    JComboBox rusia = new JComboBox();
+    public static void main(String[] args) {
+       Javaapii objeto = new Javaapii();
+       objeto.setSize(500,320);
+       objeto.setVisible(true);
+       objeto.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    }
+
+    @Override
+    public void actionPerformed(ActionEvent e) {
+       
+    }
+    Javaapii() {
+        rusia.addItem("dinamarca");
+        rusia.addItem("brasil");
+        rusia.addItem("francia");
+        rusia.addItem("colombia");
+        setLayout(new FlowLayout());
+        add(rusia);
+    }
+}
